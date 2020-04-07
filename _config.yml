@@ -12,10 +12,10 @@ description              : "Documentation for the ThoughtSpot BI product. Though
 twitter                  : thoughtspot
 url                      : https://docs.thoughtspot.com
 # the base hostname & protocol for the site
-repository               : thoughtspot/thoughtspot.github.io
+repository               : mark-plummer/master-branch-test
 # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-repo                     : thoughtspot.github.io
-github_editme_path       : thoughtspot/thoughtspot.github.io/blob
+repo                     : master-branch-test
+github_editme_path       : mark-plummer/master-branch-test/blob
 # topnav_title             : ThoughtSpot® Documentation -- REMOVED IN FAVOR OF image
 # appears on the top navigation bar next to the home button
 site_title               : ThoughtSpot
