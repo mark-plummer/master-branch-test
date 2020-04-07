@@ -1,0 +1,151 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Original replaced with the next" https://getbootstrap.com/docs/3.3/css/ -->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<!-- Disable zooming on mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- <meta name="description" content="{% if page.summary %}{{ page.summary | strip_html | strip_newlines | truncate: 160 }}{% endif %}"> -->
+<meta name="keywords" content="{{page.tags}}{% if page.tags %}, {% endif %} {{page.keywords}}">
+<title>{{ page.title }} | {{ site.site_title }}</title>
+<link rel="stylesheet" href="{{ 'css/syntax.css' | absolute_url }}">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="{{ 'css/bootstrap.min.css">-->
+<link rel="stylesheet" href="{{ 'css/modern-business.css' | absolute_url }}">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ 'css/customstyles.css' | absolute_url }}">
+<link rel="stylesheet" href="{{ 'css/boxshadowproperties.css' | absolute_url }}">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="{{ 'css/theme-new-brand.css' | absolute_url }}">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="{{ "js/jquery.navgoco.min.js" | absolute_url }}"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="{{ "js/toc.js" | absolute_url }}"></script>
+<script src="{{ "js/customscripts.js" | absolute_url }}"></script>
+
+<link rel="shortcut icon" href="{{ "images/favicon.ico" | absolute_url }}">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.url }}">
+
+{% if page.title == "Search results" %}
+<!-- Do not add the SEO and remove from indexing-->
+<meta name="robots" content="noindex" />
+{% elsif page.url contains site.current_version %}
+<!-- SEO Tools -->
+{% seo %}
+{% elsif page.url == "/" or page.url == "" %}
+<meta name="robots" content="noindex" />
+{% else %}
+{% seo %}
+{% endif %}
+
+<!--  Site Search -->
+<script>
+  /********* Version 11.x JavaScript for Site Search 360 *********/
+var ss360Config = {
+  /********* General *********/
+    siteId: "docs.thoughtspot.com",
+    showErrors: false,
+    layout: {
+        navigation: {
+            position: "top"
+        },
+        mobile: {
+            showUrl: true,
+            showImages: true
+        },
+        desktop: {
+            showUrl: true,
+            showImages: true
+        }
+    },
+    /********* Search Suggestions *********/
+    suggestions: {
+        show: false,
+        maxQuerySuggestions: 3,
+        showImages: false,
+        num: 6,
+        minChars: 3,
+        highlight: true
+    },
+    style: {
+        themeColor: "#4E55FD",
+        suggestions: {
+            text: {
+                color: "#5c5c5c"
+            },
+            background: {
+                color: "#ffffff"
+            },
+            padding: "1px",
+            distanceFromTop: "0px",
+            border: {
+                color: "#4E55FD",
+                radius: "0px"
+            }
+     },
+        /********* Search Box *********/
+        searchBox: {
+            text: {
+                color: "#6c6c6c",
+                size: "14px"
+            },
+            background: {
+                color: "#ffffff"
+            },
+            padding: "6px",
+            icon: {
+                image: "magnifier"
+            },
+            border: {
+                color: "#98a0b0",
+                radius: "0px"
+            },
+            button: {
+                text: "Search..."
+            }
+        },
+        loaderType: "circle",
+        animationSpeed: 250
+    },
+    searchBox: {
+        placeholder: "Search...",
+        selector: "#searchBox"
+    },
+    results: {
+        embedConfig: {
+            contentBlock: "searchresults-only",
+            url: "https://docs.thoughtspot.com/search.html"
+        },
+        caption: "Found #COUNT# results for your query \"#QUERY#\"",
+        group: true,
+        num: 300,
+        highlightQueryTerms: true,
+        moreResultsButton: "More results",
+        noResultsText: "Sorry, we have not found any matches for your query.",
+        queryCorrectionText: "Did you mean \"#CORRECTION#\"?",
+        moreResultsPagingSize: 50
+    },
+    contentGroups: {
+        otherName: "Search results",
+        ignoreOther: false
+    }
+}
+</script>
+<script src="https://sitesearch360.com/cdn/sitesearch360-v11.min.js"></script>

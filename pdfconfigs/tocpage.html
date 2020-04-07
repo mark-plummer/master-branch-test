@@ -1,0 +1,49 @@
+---
+type: frontmatter
+search: exclude
+permalink: pdfconfigs/tocpage.html
+---
+
+<!-- new page -->
+<div id="navig">
+    <h1>Table of Contents</h1>
+
+    {% assign sidebar = site.data.sidebars[site.pdf_sidebar].entries %}
+
+    <ul id="mysidebar" class="nav">
+        {% for entry in sidebar %}
+        {% for section in entry.sections %}
+        {% if section.output contains "pdf" and section.type != "frontmatter" %}
+          {% for sectionitem in section.sectionitems %}
+          {% if sectionitem.output contains "pdf" and sectionitem.type != "frontmatter"%}
+                {% if sectionitem.levelTwoTitle %}
+                  <li class="sectionHead">{{ sectionitem.levelTwoTitle }}
+                {% else %}
+                   <li><a href="{{sectionitem.url | prepend: site.baseurl}}">{{ sectionitem.title }}</a>
+                {% endif %}
+                <ul>
+                    {% for level2item in sectionitem.levelTwoItems %}
+                    {% if level2item.output contains "pdf" and level2item.type != "frontmatter"%}
+                        {% if level2item.levelThreeTitle %}
+                          <li class="sectionHead2">{{ level2item.levelThreeTitle }}
+                        {% else %}
+                           <li><a href="{{level2item.url | prepend: site.baseurl}}">{{level2item.title}}</a>
+                        {% endif %}
+                        {% for level3item in level2item.levelThreeItems %}
+                          {% if level3item.output contains "pdf" and level3item.type != "frontmatter" %}
+                              <li class="indent3"><a href="{{level3item.url | prepend: site.baseurl}}">{{ level3item.title }}</a>
+                          </li>
+                          {% endif %}
+                        {% endfor %}
+                        </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,82 @@
+---
+layout: none
+search: exclude
+---
+
+
+ {% assign sidebar = site.data.sidebars[site.pdf_sidebar].entries %}
+
+   {% for entry in sidebar %}
+    {% for section in entry.sections %}
+      {% if section.output contains "pdf" %}
+              {% for sectionitem in section.sectionitems %}
+                 {% if sectionitem.output contains "pdf" and sectionitem.url %}
+                    {{site.url}}{{site.baseurl}}{{sectionitem.url}}
+                 {% elsif sectionitem.levelTwoTitle and sectionitem.output contains "pdf" %}
+                    {% for level2item in sectionitem.levelTwoItems %}
+                      {% if level2item.output contains "pdf" and level2item.url %}
+                         {{site.url}}{{site.baseurl}}{{level2item.url}}
+                      {% elsif level2item.levelThreeTitle and level2item.output contains "pdf" %}
+                          {% for level3item in level2item.levelThreeItems %}
+                            {{site.url}}{{site.baseurl}}{{level3item.url}}
+                          {% endfor %}
+                      {% endif %}
+                    {% endfor %}
+                {% endif %}
+             {% endfor %}
+      {% endif %}
+    {% endfor %}
+ {% endfor %}
+
+
+
+{% comment %}
+
+ {% assign sidebar = site.data.sidebars[page.sidebar].entries %}
+
+   {% for entry in sidebar %}
+   {% for folder in entry.folders %}
+   {% if folder.output contains "web" %}
+   <li>
+       <a href="#">{{ folder.title }}</a>
+       <ul>
+           {% for sectionitem in folder.sectionitems %}
+           {% if sectionitem.output contains "web" %}
+           {% if sectionitem.external_url %}
+           <li><a href="{{sectionitem.external_url}}" target="_blank">{{sectionitem.title}}</a></li>
+           {% elsif page.url == sectionitem.url %}
+           <li class="active"><a href="{{sectionitem.url | remove: "/"}}">{{sectionitem.title}}</a></li>
+           {% elsif sectionitem.type == "empty" %}
+           <li><a href="{{sectionitem.url | remove: "/"}}">{{sectionitem.title}}</a></li>
+
+           {% else %}
+           <li><a href="{{sectionitem.url | remove: "/"}}">{{sectionitem.title}}</a></li>
+           {% endif %}
+           {% for level2item in sectionitem.levelTwoItems %}
+           {% if level2item.output contains "web" %}
+           <li class="level2item">
+               <a href="#">{{ level2item.title }}</a>
+               <ul>
+                   {% for level2item in sectionitem.levelTwoItems %}
+                   {% if level2item.output contains "web" %}
+                   {% if level2item.external_url %}
+                   <li><a href="{{level2item.external_url}}" target="_blank">{{level2item.title}}</a></li>
+                   {% elsif page.url == level2item.url %}
+                   <li class="active"><a href="{{level2item.url | remove: "/"}}">{{level2item.title}}</a></li>
+                   {% else %}
+                   <li><a href="{{level2item.url | remove: "/"}}">{{level2item.title}}</a></li>
+                   {% endif %}
+                   {% endif %}
+                   {% endfor %}
+               </ul>
+           </li>
+           {% endif %}
+           {% endfor %}
+           {% endif %}
+           {% endfor %}
+       </ul>
+    </li>
+      {% endif %}
+       {% endfor %}
+       {% endfor %}
+{% endcomment %}

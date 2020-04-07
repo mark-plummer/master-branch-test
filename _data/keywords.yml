@@ -1,0 +1,10 @@
+keywords:
+  - word: "top"
+    type: "general"
+    examples:
+      - "top sales rep by count sales for average revenue > 10000"
+      - "sales rep average revenue for each region top"
+  - word: "not begins with"
+    type: "text"
+    examples:
+      - "product name not begins with \"tom's\""

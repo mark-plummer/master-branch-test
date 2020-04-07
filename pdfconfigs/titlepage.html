@@ -1,0 +1,30 @@
+---
+type: title
+search: exclude
+permalink: pdfconfigs/titlepage.html
+---
+<head>
+<script>
+  prince-script()
+  target-counter()
+</script>
+<div class="printTitleArea">
+    <div class="printTitleImage">
+        <img style="width:200px;" src="{{ "images/company_logo.png" | absolute_url }}" alt="ThoughtSpot Logo"/>
+    </div>
+    <hr />
+    <div class="printTitle">{{site.print_title}}</div>
+    <!-- <div class="printSubtitle">{{site.print_subtitle}}</div> -->
+    <br><div class="lastGeneratedDate">{{site.print_subtitle}} <br> {{ site.time | date: '%B, %Y' }}</div>
+
+
+
+    <div class="copyrightBoilerplate">
+        <p>&copy; COPYRIGHT 2015, 2020 THOUGHTSPOT, INC. ALL RIGHTS RESERVED.</p>
+        <p>910 Hermosa Court, Sunnyvale, California 94085</p>
+        <p>This document may not, in whole or in part, be copied, photocopied, reproduced, translated, or reduced to any electronic medium or machine-readable form without prior consent in writing from ThoughtSpot, Inc.</p>
+        <p>All rights reserved. The ThoughtSpot products and related documentation are protected by U.S. and international copyright and intellectual property laws. ThoughtSpot and the ThoughtSpot logo are trademarks of ThoughtSpot, Inc. in the United States and certain other jurisdictions. ThoughtSpot, Inc. also uses numerous other registered and unregistered trademarks to identify its goods and services worldwide. All other marks used herein are the trademarks of their respective owners, and ThoughtSpot, Inc. claims no ownership in such marks.</p>
+        <p>Every effort was made to ensure the accuracy of this document. However, ThoughtSpot, Inc., makes no warranties with respect to this document and disclaims any implied warranties of merchantability and fitness for a particular purpose. ThoughtSpot, Inc. shall not be liable for any error or for incidental or consequential damages in connection with the furnishing, performance, or use of this document or examples herein. The information in this document is subject to change without notice.</p>
+    </div>
+
+</div>

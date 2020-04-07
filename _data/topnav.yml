@@ -1,0 +1,30 @@
+## Topnav single links
+## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
+# topnav:
+# - title: Topnav
+#   items:
+#     - title: GitHub
+#       external_url: https://github.com/tomjohnson1492/documentation-theme-jekyll
+#     - title: News
+#       url: /news
+
+#Topnav dropdowns
+topnav_dropdowns:
+- title: Topnav dropdowns
+  sections:
+    - title: Version
+      sectionitems:
+        - title: latest
+          url: /6.0/index.html
+        - title: 5.3
+          url: /5.3/index.html
+        - title: 5.2
+          url: /5.2/index.html
+        - title: 5.1
+          url: /5.1/index.html
+        - title: 5.0
+          url: /5.0/index.html
+        - title: 4.5
+          url: /4.5/index.html
+        - title: 4.4
+          url: /4.4/index.html

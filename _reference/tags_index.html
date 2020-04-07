@@ -1,0 +1,14 @@
+---
+title: [Topic Index]
+toc: false
+sidebar: mydoc_sidebar
+permalink: /:collection/:path.html
+---
+The following indexes the topics found in this release.
+
+<div class="tags">
+{% assign projectTags = site.data.tags.allowed-tags %}
+{% for tag in projectTags %}
+<li><a href="{{ "tag_" | append: tag | append: ".html" | prepend: "../tags/" }}">{{tag}}</a></li>
+{% endfor %}
+</div>

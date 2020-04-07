@@ -1,0 +1,20 @@
+---
+layout: null
+search: exclude
+---
+
+{% comment %}
+
+    /blink/app/src/modules/help-widget/help-keywords.js Contains all the keywords in the help
+{%  endcomment %}
+
+{
+"keywords":
+  [  {% for item in site.data.keywords.keywords %}
+    {
+      "word": "{{item.word}}",
+      "examples": [{% for example in item.examples %}"{{example | escape }}"{% unless item.examples.last == example %},{% endunless %}{% endfor %}]
+    } {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}

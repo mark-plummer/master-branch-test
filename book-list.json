@@ -1,0 +1,111 @@
+{
+  "version": "6.0",
+  "books": [
+    {
+      "filename": "ThoughtSpot_Administration_Guide",
+      "title": "ThoughtSpot Administration Guide",
+      "codes": [
+        "admBk"
+      ]
+    },
+    {
+      "filename": "ThoughtSpot_Application_Integration_Guide",
+      "title": "ThoughtSpot Application Integration Guide",
+      "codes": [
+        "apgBk"
+      ]
+    },
+    {
+      "filename": "ThoughtSpot_Data_Integration_Guide",
+      "title": "ThoughtSpot Data Integration Guide",
+      "codes": [
+        "digBk"
+      ]
+    },
+    {
+      "filename": "ThoughtSpot_Disaster_Recovery_Guide",
+      "title": "ThoughtSpot Disaster Recovery Guide",
+      "codes": [
+        "drgBk"
+      ]
+    },
+    {
+      "filename": "ThoughtSpot_Deployment_Guide",
+      "title": "ThoughtSpot Deployment Guide",
+      "codes": [
+        "appQs"
+      ]
+    },
+    {
+      "filename": "ThoughtSpot_AWS_Deployment_Guide",
+      "title": "ThoughtSpot Deployment Guide for Amazon Web Services",
+      "codes": [
+        "instAWS"
+      ]
+    },
+    {
+      "filename": "ThoughtSpot_Azure_Deployment_Guide",
+      "title": "ThoughtSpot Deployment Guide for Microsoft Azure",
+      "codes": [
+        "instAzure"
+      ]
+    },
+    {
+      "filename": "ThoughtSpot_GCP_Deployment_Guide",
+      "title": "ThoughtSpot Deployment Guide for Google Cloud Platform",
+      "codes": [
+        "instGCP"
+      ]
+    },
+    {
+      "filename": "ThoughtSpot_VMware_Deployment_Guide",
+      "title": "ThoughtSpot Deployment Guide for VMware",
+      "codes": [
+        "instVMware"
+      ]
+    },
+    {
+      "filename": "ThoughtSpot_Dell_Deployment_Guide",
+      "title": "ThoughtSpot Deployment Guide for Dell",
+      "codes": [
+        "instDell"
+      ]
+    },
+    {
+      "filename": "ThoughtSpot_Reference_Guide",
+      "title": "ThoughtSpot Reference Guide",
+      "codes": [
+        "refGd",
+        "refGdAdmin"
+      ]
+    },
+    {
+      "filename": "ThoughtSpot_SMC_Installation_Guide",
+      "title": "ThoughtSpot Deployment Guide for SMC",
+      "codes": [
+        "instSMC"
+      ]
+    },
+    {
+      "filename": "ThoughtSpot_Release_Notes",
+      "title": "ThoughtSpot Release Notes",
+      "codes": [
+        "rnotes"
+      ]
+    },
+    {
+      "filename": "ThoughtSpot_in_Practice",
+      "title": "ThoughtSpot in Practice",
+      "codes": [
+        "practGd"
+      ]
+    },
+    {
+      "filename": "ThoughtSpot_Embrace",
+      "title": "ThoughtSpot Embrace",
+      "codes": [
+        "embraceGd"
+      ]
+    }
+  ]
+}

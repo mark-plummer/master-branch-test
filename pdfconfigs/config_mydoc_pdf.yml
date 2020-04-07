@@ -1,0 +1,67 @@
+# ThoughtSpot_Administration_Guide_x.x
+# ThoughtSpot_Data_Integration_Guide_x.x
+# ThoughtSpot_Release_Notes_x.x
+# ThoughtSpot_Application_Integration_Guide_x.x
+# ThoughtSpot_Disaster_Recovery_Guide_x.x
+# ThoughtSpot_User_Guide_x.x
+# ThoughtSpot_Data_Connect_Guide_x.x
+# ThoughtSpot_Reference_Guide_x.x
+# ThoughtSpot_Node_Setup_Guide_x.x
+# ThoughtSpot_AWS_Installation_Guide_x.x
+# ThoughtSpot_Azure_Installation_Guide_x.x
+# ThoughtSpot_Dell_Installation_Guide_x.x
+# ThoughtSpot_VMware_Installation_Guide_x.x
+# ThoughtSpot_GCP_Installation_Guide_x.x
+# ThoughtSpot_in_Practice_x.x
+# ThoughtSpot_SMC_Installation_Guide_x.x
+#
+
+destination: _site/
+url: "https://docs.thoughtspot.com"
+baseurl: "/6.0"
+port: 
+output: pdf
+product: mydoc
+print_title: ThoughtSpot Administration Guide
+print_subtitle: Release 6.0
+output: pdf
+defaults:
+  -
+
+collections:
+  admin:
+    output: true
+  advanced-search:
+    output: true
+  app-integrate:
+    output: true
+  appliance:
+    output: true
+  complex-search:
+    output: true
+  data-connect:
+    output: true
+  data-integrate:
+    output: true
+  disaster-recovery:
+    output: true
+  end-user:
+    output: true
+  error-codes:
+    output: true
+  reference:
+    output: true
+  release:
+    output: true
+  spotiq:
+    output: true
+  practice:
+    output: true
+
+defaults:
+  - values:
+      layout: "page_print"
+      comments: true
+      search: true
+
+pdf_sidebar: mydoc_sidebar

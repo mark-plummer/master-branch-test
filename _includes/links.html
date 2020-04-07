@@ -1,0 +1,44 @@
+{% comment %}Get links from each sidebar, as listed in the _config.yml file under sidebars{% endcomment %}
+
+{% for sidebar in site.sidebars %}
+{% for entry in site.data.sidebars[sidebar].entries %}
+{% for section in entry.sections %}
+{% for sectionitem in section.sectionitems %}
+{% if sectionitem.url contains "html#" %}
+[{{sectionitem.url | remove: "/" }}]: {{sectionitem.url | remove: "/"}}
+{% else %}
+[{{sectionitem.url | remove: "/"  | remove: ".html"}}]: {{sectionitem.url | remove: "/"}}
+{% endif %}
+{% for levelTwos in sectionitem.levelTwos %}
+{% for levelTwoitem in levelTwos.levelTwoitems %}
+[{{levelTwoitem.url | remove: "/"  | remove: ".html"}}]: {{levelTwoitem.url | remove: "/"}}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+
+
+{% comment %} Get links from topnav {% endcomment %}
+
+{% for entry in site.data.topnav.topnav %}
+{% for item in entry.items %}
+{% if item.external_url == null %}
+[{{item.url | remove: "/" | remove: ".html"}}]: {{item.url | remove: "/"}}
+{% endif %}
+{% endfor %}
+{% endfor %}
+
+{% comment %}Get links from topnav dropdowns {% endcomment %}
+
+{% for entry in site.data.topnav.topnav_dropdowns %}
+{% for section in entry.sections %}
+{% for sectionitem in section.sectionitems %}
+{% if sectionitem.external_url == null %}
+[{{sectionitem.url | remove: "/"  | remove: ".html"}}]: {{sectionitem.url | remove: "/"}}
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+

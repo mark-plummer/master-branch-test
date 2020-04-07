@@ -1,0 +1,24 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+	<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	  {% for post in site.admin %}{% include single-post-sitemap.html %}{% endfor %}
+	  {% for post in site.advanced-search %}{% include single-post-sitemap.html %}{% endfor %}
+		{% for post in site.app-integrate %}{% include single-post-sitemap.html %}{% endfor %}
+		{% for post in site.appliance %}{% include single-post-sitemap.html %}{% endfor %}
+		{% for post in site.complex-search %}{% include single-post-sitemap.html %}{% endfor %}
+		{% for post in site.data-connect %}{% include single-post-sitemap.html %}{% endfor %}
+		{% for post in site.data-integrate %}{% include single-post-sitemap.html %}{% endfor %}
+		{% for post in site.disaster-recovery %}{% include single-post-sitemap.html %}{% endfor %}
+		{% for post in site.end-user %}{% include single-post-sitemap.html %}{% endfor %}
+		{% for post in site.error-codes %}{% include single-post-sitemap.html %}{% endfor %}
+		{% for post in site.reference %}{% include single-post-sitemap.html %}{% endfor %}
+		{% for post in site.release %}{% include single-post-sitemap.html %}{% endfor %}
+		{% for post in site.spotiq %}{% include single-post-sitemap.html %}{% endfor %}<url>
+		<loc>{{ site.url | absolute_url }}</loc>
+		 <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+		 <changefreq>monthly</changefreq>
+	  <priority>1</priority>
+	</url>
+</urlset>

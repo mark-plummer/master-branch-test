@@ -1,0 +1,140 @@
+
+# Site Settings
+locale                   : "en"
+destination              : ./_site
+output                   : web
+# Used to designate the current version. Edit when a new version is released
+current_version          : "6.1"
+# Note that site.baseurl for this site evaluates to:
+# http://docs.thoughtspot.com/<version>/
+# used for conditional content filtering
+description              : "Documentation for the ThoughtSpot BI product. ThoughtSpot is a business intelligence and big data analytics platform that helps you explore, analyze and share real-time business analytics data easily."
+twitter                  : thoughtspot
+url                      : https://docs.thoughtspot.com
+# the base hostname & protocol for the site
+repository               : thoughtspot/thoughtspot.github.io
+# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repo                     : thoughtspot.github.io
+github_editme_path       : thoughtspot/thoughtspot.github.io/blob
+# topnav_title             : ThoughtSpot® Documentation -- REMOVED IN FAVOR OF image
+# appears on the top navigation bar next to the home button
+site_title               : ThoughtSpot
+# appears in the browser tab - seen mostly by search engines, not users
+company_name             : ThoughtSpot
+# this appears in the footer
+timezone                 : America/Tijuana
+google_analytics         : UA-44946579-2
+# if you have google-analytics ID, put it in. if not, edit this value to blank.
+
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+
+
+
+# Files and directories that jekyll will exclude from the build output
+exclude:
+  - .idea/
+  - .gitignorecat
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - SUMMARY.md
+  - about.md
+  - original.txt
+  - build-site.sh
+  - pdf-all.sh
+  - pdf-mydoc.sh
+  - pdf-product1.sh
+  - pdf-product2.sh
+  - update.sh
+
+include:
+  - images
+  - index.html
+
+# File Formatting
+# Markdown processor. Kramdown differs from github-flavored markdown in some subtle ways
+
+highlighter: rouge
+# library used for syntax highlighting
+
+markdown: kramdown
+kramdown:
+ input: GFM
+ auto_ids: true
+ hard_wrap: false
+ syntax_highlighter: rouge
+
+
+# Colleciton Settings
+
+collections:
+  admin:
+    output: true
+  advanced-search:
+    output: true
+  app-integrate:
+    output: true
+  appliance:
+    output: true
+  appliance/aws:
+    output: true
+  complex-search:
+    output: true
+  data-connect:
+    output: true
+  data-integrate:
+    output: true
+  disaster-recovery:
+    output: true
+  end-user:
+    output: true
+  # error-codes: output: true
+  reference:
+    output: true
+  release:
+    output: true
+  spotiq:
+    output: true
+  tooltips:
+    output: true
+  faq:
+    output: true
+  practice:
+    output: true
+
+defaults:
+  - values:
+      layout: "page"
+      comments: true
+      search: true
+      sidebar: mydoc_sidebar
+      topnav: topnav
+
+# these are defaults used for the frontmatter for these file types
+
+sidebars:
+- home_sidebar
+- mydoc_sidebar
+- other
+
+
+# FEEDBACK Settings
+
+#feedback_subject_line: Documentation Feedback
+#feedback_email: docs@thoughtspot.com # used as a contact email for the Feedback link in the top navigation bar
+feedback_disable: true # if you uncomment the Feedback link gets removed
+# feedback_text: "Need help?" # uncomment to set the Feedback text
+# feedback_link: "http://helpy.io/"
+# if you uncomment the previous line, it changes where the feedback link points to
+
+# Local Preview Settings
+host: 127.0.0.1
+# the preview server used. Leave as is.
+port: 4000
+# the port where the preview is rendered. You can leave this as is unless you have other Jekyll builds using this same port that might cause conflicts. in that case, use another port such as 4006.
